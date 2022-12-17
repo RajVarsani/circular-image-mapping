@@ -10,7 +10,10 @@ function UserCard({
   id: string;
 }) {
   return (
-    <div className={styles.container} style={{ "--size": size }}>
+    <div
+      className={styles.container}
+      style={{ "--size": size } as React.CSSProperties}
+    >
       <img src={image} alt="user" className={styles.img} id={id} />
     </div>
   );
