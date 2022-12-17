@@ -1,0 +1,82 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.wrapperCircle {
+  width: 90vmin;
+  height: 90vmin;
+  border: 2px solid darkgray;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.secondLevelCircle {
+  width: 75vmin;
+  height: 75vmin;
+  background-color: lightgray;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.firstLevelCircle {
+  width: 55vmin;
+  height: 55vmin;
+  background-color: gray;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.secondLevelCircleImages {
+  position: absolute;
+  z-index: 2;
+  --angle: 0;
+  transform: rotate(calc(var(--angle) * 1deg)) translate(calc(75vmin / 2))
+    rotate(calc(var(--angle) * -1deg));
+}
+
+.firstLevelCircleImages {
+  position: absolute;
+  z-index: 2;
+  --angle: 0;
+  transform: rotate(calc(var(--angle) * 1deg)) translate(calc(55vmin / 2))
+    rotate(calc(var(--angle) * -1deg));
+}
+
+.line {
+  position: absolute;
+  z-index: 1;
+  /*  Draw a line of 10px thick according to these variables */
+  /* --angle */
+  /* --length */
+  /* --parentCenterX */
+  /* --parentCenterY */
+  width: calc(var(--length) * 1px);
+  height: 5px;
+  background-color: black;
+  transform: rotate(calc(var(--angle) * 1rad))
+    translate(calc(var(--length) * 0.5px), 0);
+  top: calc(var(--parentCenterY) * 1px - 5px);
+  left: calc(var(--parentCenterX) * 1px - var(--length) * 0.5px);
+}
