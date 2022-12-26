@@ -25,7 +25,7 @@
 .secondLevelCircle {
   width: 75vmin;
   height: 75vmin;
-  background-color: lightgray;
+  background-color: #9acbcc;
   border-radius: 50%;
 
   display: flex;
@@ -38,7 +38,7 @@
 .firstLevelCircle {
   width: 55vmin;
   height: 55vmin;
-  background-color: gray;
+  background-color: #007171;
   border-radius: 50%;
 
   display: flex;
@@ -79,4 +79,38 @@
     translate(calc(var(--length) * 0.5px), 0);
   top: calc(var(--parentCenterY) * 1px - 5px);
   left: calc(var(--parentCenterX) * 1px - var(--length) * 0.5px);
+  display: flex;
+}
+
+.relationType {
+  width: 100%;
+}
+
+.colorCodingListWrapper {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.colorCodingListTitle {
+  text-transform: uppercase;
+}
+
+.colorCodingListItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.colorCodingListItemColor {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.colorCodingListItemName {
+  text-transform: capitalize;
 }
